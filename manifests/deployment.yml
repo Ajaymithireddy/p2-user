@@ -1,19 +1,18 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: userrepo 
+  name: revhire
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: userrepo
+      app: revhire
   template:
     metadata:
       labels:
-        app: userrepo 
+        app: revhire
     spec:
       containers:
-        - name: userrepo 
-          image: ajayregis.azurecr.io/userrepo
-          ports:
-          - containerPort: 8082
+        - name: revhire
+          image: ajayregis.azurecr.io/userrevhire
+          
